@@ -1977,18 +1977,18 @@ Game.Launch=function()
 			return result;
 		}
 		
-		Game.cookiesEarned=0;//all cookies earned during gameplay
-		Game.cookies=0;//cookies
-		Game.cookiesd=0;//cookies display
-		Game.cookiesPs=1;//cookies per second (to recalculate with every new purchase)
-		Game.cookiesPsRaw=0;//raw cookies per second
-		Game.cookiesPsRawHighest=0;//highest raw cookies per second this ascension
-		Game.cookiesReset=0;//cookies lost to resetting (used to determine prestige and heavenly chips)
-		Game.cookieClicks=0;//+1 for each click on the cookie
+		Game.CandyEarned=0;//all cookies earned during gameplay
+		Game.Candy=0;//cookies
+		Game.Candyd=0;//cookies display
+		Game.CandyPs=1;//cookies per second (to recalculate with every new purchase)
+		Game.CandyPsRaw=0;//raw cookies per second
+		Game.CandyPsRawHighest=0;//highest raw cookies per second this ascension
+		Game.CandyReset=0;//cookies lost to resetting (used to determine prestige and heavenly chips)
+		Game.CandyClicks=0;//+1 for each click on the cookie
 		Game.goldenClicks=0;//+1 for each golden cookie clicked (all time)
 		Game.goldenClicksLocal=0;//+1 for each golden cookie clicked (this game only)
 		Game.missedGoldenClicks=0;//+1 for each golden cookie missed
-		Game.handmadeCookies=0;//all the cookies made from clicking the cookie
+		Game.handmadeCandy=0;//all the cookies made from clicking the cookie
 		Game.milkProgress=0;//you gain a little bit for each achievement. Each increment of 1 is a different milk displayed.
 		Game.milkH=Game.milkProgress/2;//milk height, between 0 and 1 (although should never go above 0.5)
 		Game.milkHd=0;//milk height display
@@ -1999,7 +1999,7 @@ Game.Launch=function()
 		Game.heavenlyChips=0;//heavenly chips the player currently has
 		Game.heavenlyChipsDisplayed=0;//ticks up or down to match Game.heavenlyChips
 		Game.heavenlyChipsSpent=0;//heavenly chips spent on cookies, upgrades and such
-		Game.heavenlyCookies=0;//how many cookies have we baked from chips (unused)
+		Game.heavenlyCandy=0;//how many cookies have we baked from chips (unused)
 		Game.permanentUpgrades=[-1,-1,-1,-1,-1];
 		Game.ascensionMode=0;//type of challenge run if any
 		Game.resets=0;//reset counter
@@ -2027,7 +2027,7 @@ Game.Launch=function()
 		Game.pledgeT=0;
 		Game.researchT=0;
 		Game.nextResearch=0;
-		Game.cookiesSucked=0;//cookies sucked by wrinklers
+		Game.CandySucked=0;//cookies sucked by wrinklers
 		Game.cpsSucked=0;//percent of CpS being sucked by wrinklers
 		Game.wrinklersPopped=0;
 		Game.santaLevel=0;
@@ -2124,7 +2124,7 @@ Game.Launch=function()
 			Game.prefs.wobbly=1;//wobbly cookie
 			Game.prefs.monospace=0;//alt monospace font for cookies
 			Game.prefs.filters=1;//CSS filter effects (might be heavy on some browsers)
-			Game.prefs.cookiesound=1;//use new cookie click sound
+			Game.prefs.Candysound=1;//use new cookie click sound
 			Game.prefs.crates=0;//show crates around icons in stats
 			Game.prefs.altDraw=0;//use requestAnimationFrame to update drawing instead of fixed 30 fps setTimeout
 			Game.prefs.showBackupWarning=1;//if true, show a "Have you backed up your save?" message on save load; set to false when save is exported
@@ -2166,7 +2166,7 @@ Game.Launch=function()
 		
 		Game.showBackupWarning=function()
 		{
-			Game.Notify(loc("Back up your save!"),loc("Hello again! Just a reminder that you may want to back up your Cookie Clicker save every once in a while, just in case.<br>To do so, go to Options and hit \"Export save\" or \"Save to file\"!")+'<div class="line"></div><a style="float:right;" onclick="Game.prefs.showBackupWarning=0;==CLOSETHIS()==">'+loc("Don't show this again")+'</a>',[25,7]);
+			Game.Notify(loc("Back up your save!"),loc("Hello again! Just a reminder that you may want to back up your Candy Clicker save every once in a while, just in case.<br>To do so, go to Options and hit \"Export save\" or \"Save to file\"!")+'<div class="line"></div><a style="float:right;" onclick="Game.prefs.showBackupWarning=0;==CLOSETHIS()==">'+loc("Don't show this again")+'</a>',[25,7]);
 		}
 		
 		
